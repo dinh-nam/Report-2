@@ -20,7 +20,7 @@ Sau đó cũng có thể kiểm tra phiên bản của Git `git --version`\
 
 ## Sử dụng Git
 
-1. Index
+1. __Index__
 
 Index nằm giữa thư mục làm việc và commit, khi thực  hiện lệnh có nghĩa lả đang chụp ảnh nhanh thu mục làm việc vào index, cho tới khi lệnh `commit` được thực hiện thì nội dung trong __index__ mới sao chép để tạo commit mới
 
@@ -28,7 +28,7 @@ Lúc này có thể dùng `commit status` để theo dõi các thay đổi
 
 Có thể sử dụng `git diff` tượng tự nhưng __diff__ hiển thị thay đổi giữa thư mục làm việc và index trong khi đó, `git -diff --cahed` hiển thị thay đổi giữa index và commit mới nhất
 
-2. Branch
+2. __Branch__
 
 Công dụng của __branch__ là đưa con trỏ đến các vị trí commit, sau lần commit đầu tiên thì sẽ là _brach master_, trừ khi đổi branch thì các lần commit sau đó đều được đưa vào _branch master_ cừa có
 
@@ -38,7 +38,7 @@ Tuy nhiên khi làm việc, con trỏ vẫn sẽ đưa về _branch master_, do 
 ```
 git checkout [new-branch]
 ```
-3. Merge
+3. __Merge__
 
 Trong cùng 1 project thì sẽ có nhiều phần task khác nhau, khi tập hợp lại cần đồng bộ các task theo 1 chuẩn thống nhất
 
@@ -57,7 +57,7 @@ Có đôi lúc quá trình merge sẽ gặp vấn đề, nó sẽ dừng lại t
 
 Bất kỳ nội dung nào bị lỗi ghép và chưa được xử lý đều được xem là chưa ghép. Các file bị lỗi sẽ được xếp vào 1 thư mục riêng và có thể mở và chỉnh sửa thủ công
 
-4. Quản lý merge
+4. __Quản lý merge__
 
 Hoàn toàn có thể dùng `git branch` nhưng những câu lệnh thông thường như liệt kê mọi branch hiện có
 ```
@@ -76,8 +76,15 @@ Xóa 1 branch bất kỳ:
 ```
 git branch -d/-D [branch-name]
 ```
-Khi dùng option [-d] cho phép xóa 1 branch với điều kiện branch đó đã có gộp hoàn toàn, nếu không quá trình sẽ thất bại
+Khi dùng option [`-d`] cho phép xóa 1 branch với điều kiện branch đó đã có gộp hoàn toàn, nếu không quá trình sẽ thất bại
 
-Đối với option [-D] là cướng bức xóa trực tiếp 1 branch cũng như toàn bộ hoạt động/nội dung trong đó mà không cần biết nó đã được gộp hay chưa
+Đối với option [`-D`] là cướng bức xóa trực tiếp 1 branch cũng như toàn bộ hoạt động/nội dung trong đó mà không cần biết nó đã được gộp hay chưa
 
+5. __fetch và push - pull__
+
+[`fetch`] là option cho phép user tải file cũng như các hoạt động liên quan từ 1 branch được chỉ định, nhưng không gán hay tích hợp gì khác vào repo local, giúp user có thể kiểm tra các thay đổi trước khi tiến hành gộp
+
+Trong khi đó, [`pull`] là dạng tự động của __fetch__, tự lấy file từ remote repo và sau đó merge thẳng vào branch hiện tại user đang đứng
+
+Còn [`push`] thì ngược lại với __fetch__, cho phép user đời file và thư mục công việc sang 1 repo khác
 
