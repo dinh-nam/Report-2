@@ -1,5 +1,57 @@
-# heading
+# week 2
 
-## week 2
+## Git
 
-this is field for testing !
+Git là một hệ thống kiểm soát phiên bản phân tán mã nguồn mở phổ biến hiện nay. Nó có thể giúp cho chúng ta lưu lại các phiên bản của những lần thay đổi vào mã nguồn và có thể dễ dàng khôi phục lại dễ dàng và người khác có quyền truy cập mã nguồn họ có thể xem các thay đổi ở từng phiên bản. Cơ chế lưu trữ của Git là nó sẽ tạo một snapshot trên mỗi tập tin và thư mục sau khi commit, từ đó chúng ta có thể tái sử dụng lại một ảnh chụp nào đó.
+
+## Một số định nghĩa cơ bản tong Git:
+
+- Thư mục làm việc là thư mục có nội dung cần Git quản lý
+- Mỗi `commit` là một snapshot tất cả nội dung thư mục làm việc, được theo dõi bằng 40 kí tự SHA1 hash
+- Index là nơi chụp ảnh nhanh tất cả thay đổi của thư mục làm việc
+- Branch trong Git là con trỏ đến commit cụ thể
+
+## Cài đặt git
+
+Git có hầu hết trong mọi loại biến thể Linux, nhưng không phải ở dạng built-in, do đó sẽ cnầ cài đặt thông qua command
+
+```
+sudo apt-get install git
+```
+Sau đó cũng có thể kiểm tra phiên bản của Git `git --version`\
+
+## Sử dụng Git
+
+1. Index
+
+Index nằm giữa thư mục làm việc và commit, khi thực  hiện lệnh có nghĩa lả đang chụp ảnh nhanh thu mục làm việc vào index, cho tới khi lệnh `commit` được thực hiện thì nội dung trong __index__ mới sao chép để tạo commit mới
+
+Lúc này có thể dùng `commit status` để theo dõi các thay đổi
+
+Có thể sử dụng `git diff` tượng tự nhưng __diff__ hiển thị thay đổi giữa thư mục làm việc và index trong khi đó, `git -diff --cahed` hiển thị thay đổi giữa index và commit mới nhất
+
+2. Branch
+
+Công dụng của __branch__ là đưa con trỏ đến các vị trí commit, sau lần commit đầu tiên thì sẽ là _brach master_, trừ khi đổi branch thì các lần commit sau đó đều được đưa vào _branch master_ cừa có
+
+Để tạo branch mới dùng lệnh `git branch [new-branch]`
+
+Tuy nhiên khi làm việc, con trỏ vẫn sẽ đưa về _branch master_, do đó để chuyển sang branch mới thì cần gõ:
+```
+git checkout [new-branch]
+```
+3. Merge
+
+Trong cùng 1 project thì sẽ có nhiều phần task khác nhau, khi tập hợp lại cần đồng bộ các task theo 1 chuẩn thống nhất
+
+Thực hiện phép __Merge__ qua các bước sau:
+```
+git checkout master
+git merge [sub-branch]
+```
+Chuyển con trỏ đưa về branch master trước khi thực hiện
+
+Tiến hành merge tất cả thay đổi/commit từ branch được chỉ định về branch master
+
+__Lưu ý:__ mọi thay đổi về  nội dung hay folder đều phải được commit
+
