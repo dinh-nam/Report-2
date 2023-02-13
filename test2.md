@@ -138,3 +138,19 @@ Nếu user muốn clone vào 1 nơi có tên khác với tên mặc định thì
 `$ git clone https://github.com/dinh-nam/report testing-file`
 
 Sau đó file sẽ được đưa thẳng đến thư mục "testing-file" 
+
+7. __Aliases__
+
+Có thể gọi là 1 cách viết tắt lệnh, hỗ trợ người dùng về mặt syntax rất nhiều
+```
+$ git config --global aliases.ci 'commit -a'
+hoặc là
+$ git config --global aliases.unstage 'reset HEAD --'
+```
+Trong đó, user được phép gán lệnh cần thực thi vào ký tự hoặc cụm từ được chỉ định, qua đó khi gọi lệnh không cần phải nhập toàn bộ chính xác mà có thể dùng ngay các cụm từ đó như sau:
+```
+$ git ci
+$ git unstage fileA
+```
+8. __Tag__
+
