@@ -66,7 +66,7 @@ $ git branch
   * master  [* thể hiện vị trí branch đang đứng hiện tại]
     testing
 ```
-Xem lại lần commit cuối/mới nhất ở mỗi branch:
+Xem lại lần commit mới nhất ở mỗi branch:
 ```
 git branch -v
 ```
@@ -86,5 +86,28 @@ Khi dùng option [`-d`] cho phép xóa 1 branch với điều kiện branch đó
 
 Trong khi đó, [`pull`] là dạng tự động của __fetch__, tự lấy file từ remote repo và sau đó merge thẳng vào branch hiện tại user đang đứng
 
-Còn [`push`] thì ngược lại với __fetch__, cho phép user đời file và thư mục công việc sang 1 repo khác
+Còn [`push`] thì ngược lại với __fetch__, cho phép user đẩy file và các nội dụng đã xác nhận lên 1 branch được chỉ định, để tránh bị ghi đè thì Git sẽ không push khi nó ko fast-forward-merge thành công trên repo đích
+
+```
+git [remote] [branch]
+```
+với option [--force]: buộc đẩy ngay cả khi chưa đủ điều kiển push, hạn chế sử dụng khi chưa đảm bảo nội dung được xác nhận
+
+Option [--all]: đẩy toàn bộ file và nội dung đến remote branch được chỉ định
+
+Option [--tags]: các tag thường không được push tự động mà cần dùng option này để đẩy toàn bộ tag đến remote repo được chỉ định
+
+User có thể đổi tên branch cho phù hợp ý muốn của mình
+```
+git branch --move [old-name] [new-name]
+```
+Tuy nhiên đây chỉ là thay đổi cục bộ và không ai khác ngoài chính user đó nhìn thấy, để có thể thay đổi trên remote repo và nhiều người thấy hơn
+```
+git push --set-upstream origin new-name
+```
+Nếu ở main branch hoạt như master brench, user có thể xóa master branch
+
+6. __Remote Repository__
+
+Mục đích của việc sử dụng remote repository là cho phép bất cứ ai ở những địa điểm khác nhau cũng có thể đóng góp các thay đổi mới cho repository.
 
