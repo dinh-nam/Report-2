@@ -111,3 +111,30 @@ Nếu ở main branch hoạt như master brench, user có thể xóa master bran
 
 Mục đích của việc sử dụng remote repository là cho phép bất cứ ai ở những địa điểm khác nhau cũng có thể đóng góp các thay đổi mới cho repository.
 
+- Khởi tạo 1 repository trong folder trống có sẵn:
+```
+$ cd /home/user/[folder-name]
+$ git init
+```
+Tại đây sẽ tạo thư mục nhánh với đuôi dạng ".git" và chứ toàn bộ file, nội dung cần thiết cho 1 repository cơ bản (khung git repo). 
+
+- Khởi tạo trong folder đang sử dụng từ trước cần có các bước lệnh để dò tìm theo thư mục đó cũng như xác thực:
+```
+$ git add *.c
+$ git add LICENSE
+$ git commit -m 'Initial project version
+```
+- Sao chép repository có sẵn từ trước:
+```
+$ git clone URL
+```
+Ví dụ: sao chép repo từ link tên "report"
+`$ git clone https://github.com/dinh-nam/report `
+
+Lúc này sẽ có thư mục tên là "report" cùng với đầy đủ file cũng như nội dung sao chép đã sẵn sàng làm việc bên trong
+
+Nếu user muốn clone vào 1 nơi có tên khác với tên mặc định thì cần nêu tên được chỉ định làm đối số:
+
+`$ git clone https://github.com/dinh-nam/report testing-file`
+
+Sau đó file sẽ được đưa thẳng đến thư mục "testing-file" 
