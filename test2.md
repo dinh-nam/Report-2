@@ -154,3 +154,97 @@ $ git unstage fileA
 ```
 8. __Tag__
 
+Git gắn thẻ vào các mốc cụ thể  quan trọng trong lịch sử của repo, thông thường sẽ là các điểm công bố phiên bản (v1.0,v2.0)
+
+Phân biệt loại tag, liêt kê tag, tạo-xóa tag
+
+Để liệt kê các tag hiện có:
+```
+git tag -l
+```
+Kết quả trả về sẽ xếp theo thứ tự alphabet (bảng chữ cái), không có tính quan trọng
+
+Ngoài ra user có thể tìm kiếm tag theo mẫu chỉ định. Ví dụ source repo có khoảng 500 tags và user cần tìm tag thuộc series 1.8:
+```
+git tag -l "v1.8"
+v1.8.0-rc0
+v1.8.0-rc1
+v1.8
+v1.8.1
+v1.8.2
+v1.8.5
+```
+Đối với tìm theo mẫu cụ thể thì option [-l/list] là bắt buộc
+
+- Tạo tag
+
+Git hỗ trợ 2 loại tag: lightweight và annotated
+
+_Annotated tag:_
+
+Là tag có chứ đầy đủ object của Git database, chúng đã được kiểm tra tổng hợp, chứa thời gian, tên, email người gán tag, có cả lời nhắn tag, được ký thực và xác thực bởi GNU-PG
+
+Cách tạo đơn giản
+```
+git tag -a [name-tag] -m "text mess here"
+```
+
+_Lighweight tag:_
+
+Là tag trỏ về  1 commit cụ thể và không thay đởi gì trong branch, không hiện quá nhiều thông tin chi tiết
+```
+git tag v1.8.6-lw
+```
+Không cần thêm bất cứ option nào, khi dùng `git show` sẽ chỉ hiển thị thông tin phần commit
+
+_Tag Later:_
+
+Dành cho các trường hợp bỏ sót hoặc quên tag commit, Git vẫn cho phép user tag lại phần commit sau đó
+```
+git log --pretty=oneline
+```
+Lệnh này cho user nhìn toàn bộ các hoạt động đã diễn ra trong lịch sử commit 
+
+Kết quả sẽ trả về 1 chuỗi kí tự checksum cũng như tên commit đã hoàn thành trước đó. Sau khi chọn được phần commit cần tìm, bắt đầu gán tag vào trùng khớp với dãy checksum (hoặc 1 vài kí tự đầu) để tiền hành thay đổi tag.
+```
+git tag -a [name-tag] [checksum]
+```
+_Sharing tag:_
+
+Mặc định lệnh `push` sẽ không chuyển tag lên remote server, do đó cần đẩy các tag lên server sau khi khởi tạo xong
+```
+git push origin <tagname>
+```
+Trong trường hợp cần đẩy nhiều tag cùng lúc lên server:
+```
+$ git push origin --tags
+```
+Hệ thống sẽ đẩy toàn bộ các tag lên và khi có user khác clone repo cũng sẽ được kèm theo các tag (bao gồm lightweight lẫn annotated)
+
+Nếu chỉ push annotated tag lên mà không kèm lightweight:
+```
+git push <remote> --follow-tags
+```
+- Xóa tag
+
+Để xóa tag ở local repo: 
+```
+git tag -d <tagname>
+```
+Nhưng để xóa tag ở remote server có 2 cách xóa như sau:
+```
+git push <remote> :refs/tags/<tagname>
+```
+Lúc này git sẽ đọc giá trị null, đẩy lên trên remote servertrước khi dấu colon được đưa lên, qua đó hủy bỏ tag hiệu quả
+
+Còn cách khác khá trực quan và dễ nhớ hơn (thường dùng nhiều hơn)
+```
+$ git push origin --delete <tagname>
+```
+- CheckOut tag
+
+Để kiểm tra các tag hiện tại đang trỏ về các phiên bản file khác nhau, dùng lệnh `git checkout`, lúc này repository sẽ đặt vào trạng thái __"detached HEAD"__, có thể mất tính an toàn cho nội dung bên trong
+
+Ở trạng thái, mọi sửa đổi vẫn nằm trong tag cũ nhưng sẽ cần commit mới và branch mới, không thuộc về bên nào khác và không thể truy cập trừ commit hash. Do đó nếu muốn thay đổi, chỉnh sửa bất kì điều gì, ngay cả sửa lỗi, đều phải tạo 1 nhánh mới
+
+Sau khi hoàn thành và commit, nhánh mới này sẽ có khác biệt một chút so với bản gốc và nó sẽ theo các thay đổi mới này
