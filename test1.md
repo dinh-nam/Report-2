@@ -43,7 +43,7 @@ Công nghệ này đang lỗi thời và được thay thế hoàn toàn bởi T
 
 TLS là chữ viết tắt của __Transport Layer Security__, nó cũng giúp bảo mật thông tin truyền giống như SSL. Nhưng vì SSL không còn được phát triển nữa, nên TLS mới là thuật ngữ đúng nên dùng.
 
-Về cơ bản SSL và TSL ko quá khác nhau trừ cách gọi tên, các chơ chế hoạt động gần như không đổi
+Về cơ bản SSL và TSL ko quá khác nhau trừ cách gọi tên, các cơ chế hoạt động gần như không đổi
 
 ### Vai trò của SSL với 1 trang web
 
@@ -80,9 +80,62 @@ Mã khóa này có 2 phần là private key và public key để truyền dữ l
 - CA (Certificate Authority): tổ chức cung cấp thong tin SSL
 
 ### Các giao thức con của SSL
-
-- SSL Handshake Protocol.
+- SSL Handshake Protocol. (được dùng phổ biến)
 - SSL Change Cipher Spec Protocol.
 - SSL Alert Protocol.
 - SSL Record Protocol.
+
+### Các thuật toán mã hóa dùng trong SSL
+Một số thuật toán SSL sử dụng:
+
+- DES (Data Encryption Standard) là một thuật toán mã hoá có chiều dài khoá là 56 bit.
+- 3-DES (Triple-DES): là thuật toán mã hoá có độ dài khoá gấp 3 lần DES
+- DSA (Digital Signature Algorithm): là một phần trong chuẩn về xác thực số đang được được chính phủ Mỹ sử dụng.
+- EA (Key Exchange Algorithm) là một thuật toán trao đổi khoá đang được chính phủ Mỹ sử dụng.
+- MD5 (Message Digest algorithm) được phát thiển bởi Rivest.
+- RSA: là thuật toán mã hoá công khai dùng cho cả quá trình xác thực và mã hoá dữ liệu được Rivest, Shamir, and Adleman phát triển.
+- RSA key exchange: là thuật toán trao đổi khoá dùng trong SSL dựa trên thuật toán RSA.
+- RC2 and RC4: là các thuật toán mã hoá được phát triển bởi Rivest dùng cho RSA Data Security.
+- SHA-1 (Secure Hash Algorithm): là một thuật toán băm đang được chính phủ Mỹ sử dụng.
+
+## Tổng quan về Domain
+Domain là tên miền của 1 trang web hay còn gọi là địa chỉ trang web, định danh trang web đó chính xác theo tìm kiếm của người dùng
+
+Domain có 2 cấp là 2 cấp chính là 1 cấp phụ 
+### Cấu trúc của domain
+Tối thiểu 1 tên miền có 2 phần là tên miền cấp cao và toplevel domain
+
+Ngoài ra có thêm subdomain mà dễ thấy nhất là "www"-world wide web
+
+### Cách hoạt động của domain
+Khi 1 user muốn truy cập vào 1 địa chỉ cụ thế, tên miền chính là đường đi ngắn nhất để đến website đó
+
+Nếu DNS server gần nhất chưa được quảng bá tên miền trên vào bảng ghi nhớ, nó sẽ tìm hỏi ở các DNS server khác gần nó nhất và tiến trình lặp lại đến khi có 1 DNS server nào đó biết hoặc có được thông tin về domain này, sau đó từ client user sẽ tìm đường đi ngắn nhất kết nối đến website đó, trong khi đó các server chưa có thông tin trước đó sẽ lưu lại vào database của mình 
+
+** Trong trường hợp không có tên domain thì chỉ có thể truy cập website thông qua IP của máy chủ đó **
+
+### Phân loại domain
+1. Top level domain
+
+Là tên miền cấp cao nhất đứng sau dấu chấm đầu tiên và gần như bao gồm mọi domain hiện có, được dùng phổ biến nhất như ".com" ".org" ".gov" ".edu" ".info" ".net" ...
+
+2. ccTLD: country-code top-level-domain
+
+Là tên miền cấp cao dành riêng cho từng quốc qia cụ thể như Mỹ(.us) hay Pháp(.fr), chúng còn được các doanh nghiệp lớn hay tập đoàn đa quốc gia sử dụng cho từng site cụ thể ở các thị trường nhất định
+
+3. gTLD: generic top-level-domain
+
+Nhóm tên miền này được xem là domain cấp cao của chung không thuộc riêng của hội nhóm hay tổ chức, chính phủ quốc gia nào mà là hướng đến 1 lĩnh vực, mục đích cụ thế. Ví dụ như giáo dục(.edu)
+
+4. sTLD
+
+Sponsored top-level domain là tiên miền cấp cao nhất được tài trợ, các tên miền cấp này bị giới hạn như (.mil), (.gov). Ngoài ra, còn có một số tên miền khác cũng đại diện cho sTLD, chẳng hạn như (.edu) – dành cho tổ chức giáo dục, (.asia) – dành cho các công ty tại thị trường Châu Á hay (.post) – dành cho bưu chính viễn thông,...
+
+5. uTLD
+
+Ngược lại với sTLD thì uTLD không được tài trợ sử dụng chủ yêu cho mục đích chia sẻ thông tin chung như các đầu báo tin tức online (.info)
+
+6. iTLD
+
+Viết đầy đủ là Infrastructure top-level domain, là tên miền (.arpa). Đây là tên miền đại diện cho ARPA và chỉ dành riêng cho ICANN dùng để giải quyết các vấn đề về cơ sở hạ tầng internet.
 
