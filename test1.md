@@ -5,7 +5,6 @@ SSL được viết tắt từ __Sercure Sockets Layer__, là một tiêu chuẩ
 Ngoài ra khi sử dụng thì mọi dữ kiệu trao đổi giữa người nhận và website hau người gửi đều được bảo vệ bở cơ chế mạnh mẽ nhất hiện tại, được hàng triệu khách hàng tin tưởng và sử dụng hơn.
 
 SSL sẽ giúp bảo mật các giao dịch giữa khách hàng và doanh nghiệp, các dịch vụ truy nhập hệ thống trang web và các ứng dụng như Outlook Web Access, Exchange, và Office Communication Server,... và còn bảo mật cả các ứng dụng ảo hóa hoặc các ứng dụng điện toán đám mây (cloud)
-
 ### Phân loại SSL
 1. DV-SSL: domain validation
 
@@ -36,30 +35,24 @@ Chuyên dành cho các website có nhu cầu sử dụng SSL cho nhiều subdoma
 Được thiết kế cho các ứng dụng Communication của Microsoft như Microsoft Exchange Server, Microsoft Office Communications, Lync và cũng là giải pháp tiết kiệm cho các môi trường khác như Share Hosting & QA Testing. Lựa chọn thêm SANs cho phép bảo mật tới 40 tên miền và máy chủ chỉ với một chứng thư số. Ngoài ra, SANs còn mang lại sự linh hoạt cho người sử dụng, dễ dàng hơn trong việc cài đặt, sử dụng và quản lý chứng thư số SSL. 
 
 Ngoài ra còn có MDC-SSL (chứng chỉ đa miền) và UCC-SSL (truyền thông hợp nhất) 
-
 ### Sự thay thế
-
 Công nghệ này đang lỗi thời và được thay thế hoàn toàn bởi TLS.
 
 TLS là chữ viết tắt của __Transport Layer Security__, nó cũng giúp bảo mật thông tin truyền giống như SSL. Nhưng vì SSL không còn được phát triển nữa, nên TLS mới là thuật ngữ đúng nên dùng.
 
 Về cơ bản SSL và TSL ko quá khác nhau trừ cách gọi tên, các cơ chế hoạt động gần như không đổi
-
 ### Vai trò của SSL với 1 trang web
-
 - Mã hóa thông tin: các dữ liệu, thông tin trong quá trình truyền giữa browser và server được bảo vệ an toàn, tránh các tình huống huống xâm phạm, phá hoại, đánh cắp từ kẻ tấn công
 - Nâng cao tính xác thực trang web: hạn chế thông tin sai sót và truyền đi lung tung trong quá trình truyền giữa server tới browser được chỉ định, các thông tin đó sẽ chỉ có các bên được xác định mới có thể đọc được
 - Gia tăng độ tin cậy cho khách hàng: khách hàng sẽ không muốn truy cập, trao đổi thông tin với trang web bị gán cảnh báo không an toàn, nếu được trang bị SSL, khách hàng sẽ yên tâm hơn khi lựa chọn truy cập trang web, chọn lọc thông tin và tải xuống
 - Nâng cao, tối ưu vị trí tìm kiếm trên bảng xếp hạng: Với vị trí càng cao trên bảng tìm kiếm sẽ là lợi thế với các trang web có SSL. Ở góc độ doanh nghiệp thì điều này giúp tiếp cận các tệp khách hàng hiệu quả cũng như chuyển đổi khách hàng tiềm năng thành khách hàng thực tế. 
 - Điều kiện tiêu chuẩn cho các trang web có tính năng thanh toán trực tiếp (PCI compliance). Các trang web thu thập thông tin khách hàng, số tài khoản ngân hàng, thẻ tín dụng,.... đều cần có chứng chỉ SSL hợp lệ để  có thể tiếp nhận thông tin khách hàng  
-
 ### Các chú ý khi đăng ký SSL
 - Giá thành: với đối tượng khách hàng cá nhân hay doanh nghiệp vừa và nhỏ thì 1 chứng chỉ SSL giá thành thấp nhưng hiệu suất bảo mật vẫn phải tối ưu là điều cần thiết để cân bằng chi phí
 - Gia hạn chứng chỉ: tất cả chứng chỉ SSL đều có thời hạn, thông thường SSL sẽ hết hiệu lực sau 1 năm kể từ ngày kích hoạt, do đó cần lưu ý về thời hạn SSL, để  tránh việc trang web có nhiều lỗ hổng cho cả người dùng lẫn doanh nghiệp dễ bị kẻ xấu lợi dụng.
 - Sử dụng HTTPS: https bảo mật hơn giap thức cũ là http ở việc có thêm  SSL, 2 công nghệ này luôn đi liền với nhau và trở thành tiêu chuẩn mới cho website hiện nay đều yêu cầu sử dụng giao thức HTTPS thay vì giao thức cũ
 - Số lượng tên miền: như đã nêu rằng có SSL dơn miền và SSL đa miền, trừ khi khách hàng có dự dịnh mở rộng tên miền trong tương lại thì việc lựa chọn SSL đợn miền cũng là 1 cách để tối ưu chi phí cho bản thân
 - Loại SSL: tùy theo qui mô doanh nghiệp sẽ lựa chọn loại SSL tương ứng. Tăng độ tin cậy trong mắt khách hàng cũng là 1 cách tăng độ uy tín doanh nghiệp, chứng chỉ xác thực càng cao cấp thì độ bảo vệ cũng như đảm bảo quyền lợi, kể cả giá thành cũng cao theo 
-
 ### Cơ chế hoạt động của SSL
 SSL hoạt động dựa trên mã khóa public khi user sử dụng 1 dịch vụ có SSL hỗ trợ như truy cập 1 website
 
@@ -69,7 +62,6 @@ Mã khóa này có 2 phần là private key và public key để truyền dữ l
 - client nhận public key từ server, giải mã và gửi lại key mã hóa vừa tạo về lại server
 - server nhận kkey và giải mã, sau đó gửi cả key và nội dung được mã hóa về  client
 - client nhận packet, giải mã nội dung vừa nhận, hoàn tất bước "bắt tay SSL/TLS"
-
 ### Thành phần chung của SSL
 - CSR (Certificate Signing request): Là 1 đoạn text chứa thông tin của chủ sở hữu tên miền được mã hóa. Thông tin này được gửi đến nhà cung cấp dịch vụ SSL
 
@@ -78,13 +70,11 @@ Mã khóa này có 2 phần là private key và public key để truyền dữ l
 - Private key: được sinh ra cùng lúc CRT, CRT được mã hóa khi đưa về browser và phần key này dùng để giải mã thông tin mã hóa của CRT
 
 - CA (Certificate Authority): tổ chức cung cấp thong tin SSL
-
 ### Các giao thức con của SSL
 - SSL Handshake Protocol. (được dùng phổ biến)
 - SSL Change Cipher Spec Protocol.
 - SSL Alert Protocol.
 - SSL Record Protocol.
-
 ### Các thuật toán mã hóa dùng trong SSL
 Một số thuật toán SSL sử dụng:
 
@@ -97,7 +87,6 @@ Một số thuật toán SSL sử dụng:
 - RSA key exchange: là thuật toán trao đổi khoá dùng trong SSL dựa trên thuật toán RSA.
 - RC2 and RC4: là các thuật toán mã hoá được phát triển bởi Rivest dùng cho RSA Data Security.
 - SHA-1 (Secure Hash Algorithm): là một thuật toán băm đang được chính phủ Mỹ sử dụng.
-
 ## Tổng quan về Domain
 Domain là tên miền của 1 trang web hay còn gọi là địa chỉ trang web, định danh trang web đó chính xác theo tìm kiếm của người dùng
 
@@ -106,14 +95,12 @@ Domain có 2 cấp là 2 cấp chính là 1 cấp phụ
 Tối thiểu 1 tên miền có 2 phần là tên miền cấp cao và tên miền cấp 2
 
 Ngoài ra có thêm subdomain mà dễ thấy nhất là "www"-world wide web
-
 ### Cách hoạt động của domain
 Khi 1 user muốn truy cập vào 1 địa chỉ cụ thế, tên miền chính là đường đi ngắn nhất để đến website đó
 
 Nếu DNS server gần nhất chưa được quảng bá tên miền trên vào bảng ghi nhớ, nó sẽ tìm hỏi ở các DNS server khác gần nó nhất và tiến trình lặp lại đến khi có 1 DNS server nào đó biết hoặc có được thông tin về domain này, sau đó từ client user sẽ tìm đường đi ngắn nhất kết nối đến website đó thông qua DNS server vừa tìm được, trong khi đó các server chưa có thông tin trước đó sẽ lưu lại vào database của mình 
 
 ** Trong trường hợp không có tên domain thì chỉ có thể truy cập website thông qua IP của máy chủ đó **
-
 ### Phân loại domain
 1. TLD-Top level domain
 
@@ -144,24 +131,19 @@ Viết đầy đủ là Infrastructure top-level domain, là tên miền (.arpa)
 |-----|-----|
 |transfer domain|point domain|
 |__Transfer domain__ là thao tác nhà cung cấp chuyển quyền quản lý tên miền đến nhà cung cấp khác. Chuyển tên thường thường sẽ mất ký chuyển tên miền tại nhà đăng ký mới   |   __Point domain to a host__ là thao tác truy cập đến khu vực quản lý tên miền của nhà đăng ký hiện tại, đồng thời cập nhật bản ghi tại nhà đăng ký hiện tại nhằm sử dụng tên miền cho một loại dịch vụ hosting nào đó|
-
 ### Phân biệt hosting và domain
 1 website hoạt động cần cả domain và hosting, trong đó domain sẽ là nơi cung cấp user cách truy cập vào trang web còn hosting sẽ là nơi chứa toàn bộ nội dung trang web
-
 ### Gia hạn domain
 Thông thường domain cần phải gia hạn sử dụng sau khoảng 75 ngày
 
 Tuy nhiên có thể tùy theo nhà cung cấp mà thời gian sẽ thay đổi, nên liên hệ với bên đăng lý để nắm rõ thông tin nhất
-
 ## DNS
 ### DNS là gì ?
-
 Được viết đầy đủ là Domain Name System, là hệ thống phân phải tên miền, thiết lập liên kết tương ứng giữa địa chỉ IP và domain, ra đời vào 1984
 
 Giống như danh bạ điện thoại, domain là tên người dùng số thuê bao và địa chỉ IP chính là số số thuê bao
 
 Máy chủ DNS thực hiện việc gán domain, lập bản đồ tên miền tới địa chỉ IP. Các máy chủ có tên thẩm quyền có trách nhiệm đối với mỗi tên miền của nó và có thể chỉ định tên máy chủ khác cho các domain phụ. Các thẻ RFID, ký tự quốc tế trong địa chỉ Email, mã số UPC,… cũng có thể dùng hệ thống phân giải tên miền
-
 ### Kiến trúc của DNS
 - Không gian tên miền-domain space
 - Tên miền-domain name
@@ -169,7 +151,6 @@ Máy chủ DNS thực hiện việc gán domain, lập bản đồ tên miền t
 - Tên miền quốc tế hóa-Internationalized domain names
 - Máy chủ tên miền- domain name servers
 - Máy chủ tên miền có thẩm quyền-authoritative name server
-
 ### Cấu trúc DNS packet
 1 gói tin DNS có cấu trúc gồm:
 1. ID
@@ -254,7 +235,29 @@ Trong phần thêm vào của gói tin, lượng tài nguyên sẽ được ghi 
 13. NS count
 
 Trong phần có thẩm quyền của gói tin, lượng tài nguyên sẽ được ghi lại bằng NS count
+### Cơ chế của DNS
 
+1. Chức năng
+
+Các IP dùng để định danh tài nguyên mạng. Khi kết nỗi vào internet thì mỗi client sẽ dc gán 1 IP tương ứng, khi này DNS sẽ phân giải IP thành các kí tự dễ hiểu hơn
+
+Các DNS server có chức năng ghi nhớ domain mà nó đã phân giải và ưu tiên cho các lần truy cập sau
+
+2. Nguyên lý hoạt động
+
+User truy cập vào website có tên là www.abc.us
+
+Máy chủ DNS nội bộ sẽ nhận request và tiền hành tìm kiếm kho lưu trữ có thông tin về domain hay IP cần tìm không, nếu có sẽ trả trực tiếp IP của domain đó về client về đuôi domain (.us)
+
+Nếu không có thông tin nào về domain cần tìm, local DNS server sẽ hỏi lên các DNS server mức cao nhất (root), các DNS server này sẽ chỉ cho local domain server 
+
+Lúc này local domain server sẽ gửi request sau khi xác định đuôi domain thuộc dạng nào, bắt đầu lọc các domain có cùng định dạng trên
+
+Máy chủ domain cục bộ hỏi máy chủ quản lý domain “.us” địa chỉ IP domain “abc.us” => Có => Gửi trả.
+
+Máy chủ domain cục bộ chuyển thông tin đến client user.
+
+User lấy địa chỉ IP này kết nối đến máy chủ chứa website có địa chỉ website trên
 ### Các resource record của DNS
 
 Các resource record chia thành nhiều class và type khác nhau
@@ -338,10 +341,18 @@ SRV được dùng để liên kết dịch vụ và tên máy chủ. Khi một 
 |weight |	5|
 |port |	5223|
 |target |	server.example.com|
-
 ### Sự khác nhau giữa priority và weight
 
 Giá trị "priority" trong bản ghi SRV cho phép qadmin ưu tiên một máy chủ hỗ trợ dịch vụ đã cho hơn một máy chủ khác. Máy chủ có giá trị thấp hơn sẽ nhận được nhiều lưu lượng truy cập hơn các máy chủ khác. Tuy nhiên, giá trị "weight" cũng tương tự: máy chủ có cao hơn sẽ nhận được nhiều lưu lượng truy cập hơn các máy chủ khác có cùng mức độ ưu tiên.
 
 Thực tế khi nhìn vào bản SRV thì priority luôn được xem xét trước, trong trường hợp giá trị priority bằng nhau thì mới xem xét giá trị weight
+## Hosting
+### Khái niệm
+Trong 1 website nếu domain là cách định danh trang web thì hosting chính là nơi lưu trữ dữ liệu và chia sẻ trực tuyến của trang web đó
 
+Web Hosting là nơi lưu trữ tất cả các trang Web, các thông tin, tư liệu, hình ảnh của Website trên một máy chủ Internet. Web Hosting đồng thời cũng là nơi diễn ra tất cả các hoạt động giao dịch. Trao đổi thông tin giữa Website với người sử dụng Internet và hỗ trợ các phần mềm Internet hoạt động.
+### FTP
+Nhắc tới hosting thì sẽ có FTP
+
+File Transfer Protocol – là một giao thức truyền tệp tin trên mạng Internet. Khi máy chủ hỗ trợ FTP, bạn có thể sử dụng các phần mềm FTP (FTP Client) để kết nối với máy chủ. Tải lên các tệp tin dữ liệu cũng như cập nhật website của mình một cách dễ dàng
+### Yêu cầu-tính năng của hosting
