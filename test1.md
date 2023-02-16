@@ -426,7 +426,7 @@ VPS phù hợp với đối tượng cần một giải pháp riêng, đặc th�
 
 |ưu điểm|nhược điểm|
 |-----|-----|
-|Quản trị máy chủ trực tiếp hoặc từ xa dễ dàng|độ phức tập phần cứng trung bình-cao|
+|Quản trị máy chủ trực tiếp hoặc từ xa dễ dàng|độ phức tạp phần cứng trung bình-cao|
 |Khả năng bảo mật cao, hạn chế được các cuộc tấn công mạng|chi phí xây dựng bảo trì thay thế cao|
 |cài đặt và cấu hình theo mong muốn riêng||
 |Tài nguyên không bị hạn chế, tăng băng thông, không gian lưu trữ và đảm bảo cho một lượng lớn người truy cập cùng lúc||
@@ -436,3 +436,8 @@ VPS phù hợp với đối tượng cần một giải pháp riêng, đặc th�
 Vấn đề ưu tiên là định dạng được hỗ trợ, băng thông và tốc độ truyền tải rồi mới tới dung lượng không gian lưu trữ
 
 Phải dự đoán lượng truy cập để chọn bandwith phù hợp, cân bằng chi phí để dành cho các mục cấu hình khác
+
+## Reverse Proxy
+### Khái niệm
+![](./picture/picture.png)
+
