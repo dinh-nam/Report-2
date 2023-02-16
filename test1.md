@@ -42,51 +42,51 @@ TLS là chữ viết tắt của __Transport Layer Security__, nó cũng giúp b
 
 Về cơ bản SSL và TSL ko quá khác nhau trừ cách gọi tên, các cơ chế hoạt động gần như không đổi
 ### Vai trò của SSL với 1 trang web
-- Mã hóa thông tin: các dữ liệu, thông tin trong quá trình truyền giữa browser và server được bảo vệ an toàn, tránh các tình huống huống xâm phạm, phá hoại, đánh cắp từ kẻ tấn công
-- Nâng cao tính xác thực trang web: hạn chế thông tin sai sót và truyền đi lung tung trong quá trình truyền giữa server tới browser được chỉ định, các thông tin đó sẽ chỉ có các bên được xác định mới có thể đọc được
-- Gia tăng độ tin cậy cho khách hàng: khách hàng sẽ không muốn truy cập, trao đổi thông tin với trang web bị gán cảnh báo không an toàn, nếu được trang bị SSL, khách hàng sẽ yên tâm hơn khi lựa chọn truy cập trang web, chọn lọc thông tin và tải xuống
-- Nâng cao, tối ưu vị trí tìm kiếm trên bảng xếp hạng: Với vị trí càng cao trên bảng tìm kiếm sẽ là lợi thế với các trang web có SSL. Ở góc độ doanh nghiệp thì điều này giúp tiếp cận các tệp khách hàng hiệu quả cũng như chuyển đổi khách hàng tiềm năng thành khách hàng thực tế. 
-- Điều kiện tiêu chuẩn cho các trang web có tính năng thanh toán trực tiếp (PCI compliance). Các trang web thu thập thông tin khách hàng, số tài khoản ngân hàng, thẻ tín dụng,.... đều cần có chứng chỉ SSL hợp lệ để  có thể tiếp nhận thông tin khách hàng  
+Mã hóa thông tin: các dữ liệu, thông tin trong quá trình truyền giữa browser và server được bảo vệ an toàn, tránh các tình huống huống xâm phạm, phá hoại, đánh cắp từ kẻ tấn công
+Nâng cao tính xác thực trang web: hạn chế thông tin sai sót và truyền đi lung tung trong quá trình truyền giữa server tới browser được chỉ định, các thông tin đó sẽ chỉ có các bên được xác định mới có thể đọc được
+Gia tăng độ tin cậy cho khách hàng: khách hàng sẽ không muốn truy cập, trao đổi thông tin với trang web bị gán cảnh báo không an toàn, nếu được trang bị SSL, khách hàng sẽ yên tâm hơn khi lựa chọn truy cập trang web, chọn lọc thông tin và tải xuống
+Nâng cao, tối ưu vị trí tìm kiếm trên bảng xếp hạng: Với vị trí càng cao trên bảng tìm kiếm sẽ là lợi thế với các trang web có SSL. Ở góc độ doanh nghiệp thì điều này giúp tiếp cận các tệp khách hàng hiệu quả cũng như chuyển đổi khách hàng tiềm năng thành khách hàng thực tế. 
+Điều kiện tiêu chuẩn cho các trang web có tính năng thanh toán trực tiếp (PCI compliance). Các trang web thu thập thông tin khách hàng, số tài khoản ngân hàng, thẻ tín dụng,.... đều cần có chứng chỉ SSL hợp lệ để  có thể tiếp nhận thông tin khách hàng  
 ### Các chú ý khi đăng ký SSL
-- Giá thành: với đối tượng khách hàng cá nhân hay doanh nghiệp vừa và nhỏ thì 1 chứng chỉ SSL giá thành thấp nhưng hiệu suất bảo mật vẫn phải tối ưu là điều cần thiết để cân bằng chi phí
-- Gia hạn chứng chỉ: tất cả chứng chỉ SSL đều có thời hạn, thông thường SSL sẽ hết hiệu lực sau 1 năm kể từ ngày kích hoạt, do đó cần lưu ý về thời hạn SSL, để  tránh việc trang web có nhiều lỗ hổng cho cả người dùng lẫn doanh nghiệp dễ bị kẻ xấu lợi dụng.
-- Sử dụng HTTPS: https bảo mật hơn giap thức cũ là http ở việc có thêm  SSL, 2 công nghệ này luôn đi liền với nhau và trở thành tiêu chuẩn mới cho website hiện nay đều yêu cầu sử dụng giao thức HTTPS thay vì giao thức cũ
-- Số lượng tên miền: như đã nêu rằng có SSL dơn miền và SSL đa miền, trừ khi khách hàng có dự dịnh mở rộng tên miền trong tương lại thì việc lựa chọn SSL đợn miền cũng là 1 cách để tối ưu chi phí cho bản thân
-- Loại SSL: tùy theo qui mô doanh nghiệp sẽ lựa chọn loại SSL tương ứng. Tăng độ tin cậy trong mắt khách hàng cũng là 1 cách tăng độ uy tín doanh nghiệp, chứng chỉ xác thực càng cao cấp thì độ bảo vệ cũng như đảm bảo quyền lợi, kể cả giá thành cũng cao theo 
+Giá thành: với đối tượng khách hàng cá nhân hay doanh nghiệp vừa và nhỏ thì 1 chứng chỉ SSL giá thành thấp nhưng hiệu suất bảo mật vẫn phải tối ưu là điều cần thiết để cân bằng chi phí
+Gia hạn chứng chỉ: tất cả chứng chỉ SSL đều có thời hạn, thông thường SSL sẽ hết hiệu lực sau 1 năm kể từ ngày kích hoạt, do đó cần lưu ý về thời hạn SSL, để  tránh việc trang web có nhiều lỗ hổng cho cả người dùng lẫn doanh nghiệp dễ bị kẻ xấu lợi dụng.
+Sử dụng HTTPS: https bảo mật hơn giap thức cũ là http ở việc có thêm  SSL, 2 công nghệ này luôn đi liền với nhau và trở thành tiêu chuẩn mới cho website hiện nay đều yêu cầu sử dụng giao thức HTTPS thay vì giao thức cũ
+Số lượng tên miền: như đã nêu rằng có SSL dơn miền và SSL đa miền, trừ khi khách hàng có dự dịnh mở rộng tên miền trong tương lại thì việc lựa chọn SSL đợn miền cũng là 1 cách để tối ưu chi phí cho bản thân
+Loại SSL: tùy theo qui mô doanh nghiệp sẽ lựa chọn loại SSL tương ứng. Tăng độ tin cậy trong mắt khách hàng cũng là 1 cách tăng độ uy tín doanh nghiệp, chứng chỉ xác thực càng cao cấp thì độ bảo vệ cũng như đảm bảo quyền lợi, kể cả giá thành cũng cao theo 
 ### Cơ chế hoạt động của SSL
 SSL hoạt động dựa trên mã khóa public khi user sử dụng 1 dịch vụ có SSL hỗ trợ như truy cập 1 website
 
 Mã khóa này có 2 phần là private key và public key để truyền dữ liệu giữa 2 hệ thống:
 
-- client truy cập dịch vụ của server có SSL, ứng dụng dịch vụ yêu cầu lấy public key từ server đổi với key của chính client
-- client nhận public key từ server, giải mã và gửi lại key mã hóa vừa tạo về lại server
-- server nhận kkey và giải mã, sau đó gửi cả key và nội dung được mã hóa về  client
-- client nhận packet, giải mã nội dung vừa nhận, hoàn tất bước "bắt tay SSL/TLS"
+client truy cập dịch vụ của server có SSL, ứng dụng dịch vụ yêu cầu lấy public key từ server đổi với key của chính client
+client nhận public key từ server, giải mã và gửi lại key mã hóa vừa tạo về lại server
+server nhận kkey và giải mã, sau đó gửi cả key và nội dung được mã hóa về  client
+client nhận packet, giải mã nội dung vừa nhận, hoàn tất bước "bắt tay SSL/TLS"
 ### Thành phần chung của SSL
-- CSR (Certificate Signing request): Là 1 đoạn text chứa thông tin của chủ sở hữu tên miền được mã hóa. Thông tin này được gửi đến nhà cung cấp dịch vụ SSL
+CSR (Certificate Signing request): Là 1 đoạn text chứa thông tin của chủ sở hữu tên miền được mã hóa. Thông tin này được gửi đến nhà cung cấp dịch vụ SSL
 
-- CRT (Certificate): phần kết quả được trả về website từ SSL provider sau khi nhận CSR
+CRT (Certificate): phần kết quả được trả về website từ SSL provider sau khi nhận CSR
 
-- Private key: được sinh ra cùng lúc CRT, CRT được mã hóa khi đưa về browser và phần key này dùng để giải mã thông tin mã hóa của CRT
+Private key: được sinh ra cùng lúc CRT, CRT được mã hóa khi đưa về browser và phần key này dùng để giải mã thông tin mã hóa của CRT
 
-- CA (Certificate Authority): tổ chức cung cấp thong tin SSL
+CA (Certificate Authority): tổ chức cung cấp thong tin SSL
 ### Các giao thức con của SSL
-- SSL Handshake Protocol. (được dùng phổ biến)
-- SSL Change Cipher Spec Protocol.
-- SSL Alert Protocol.
-- SSL Record Protocol.
+SSL Handshake Protocol. (được dùng phổ biến)
+SSL Change Cipher Spec Protocol.
+SSL Alert Protocol.
+SSL Record Protocol.
 ### Các thuật toán mã hóa dùng trong SSL
 Một số thuật toán SSL sử dụng:
 
-- DES (Data Encryption Standard) là một thuật toán mã hoá có chiều dài khoá là 56 bit.
-- 3-DES (Triple-DES): là thuật toán mã hoá có độ dài khoá gấp 3 lần DES
-- DSA (Digital Signature Algorithm): là một phần trong chuẩn về xác thực số đang được được chính phủ Mỹ sử dụng.
-- EA (Key Exchange Algorithm) là một thuật toán trao đổi khoá đang được chính phủ Mỹ sử dụng.
-- MD5 (Message Digest algorithm) được phát thiển bởi Rivest.
-- RSA: là thuật toán mã hoá công khai dùng cho cả quá trình xác thực và mã hoá dữ liệu được Rivest, Shamir, and Adleman phát triển.
-- RSA key exchange: là thuật toán trao đổi khoá dùng trong SSL dựa trên thuật toán RSA.
-- RC2 and RC4: là các thuật toán mã hoá được phát triển bởi Rivest dùng cho RSA Data Security.
-- SHA-1 (Secure Hash Algorithm): là một thuật toán băm đang được chính phủ Mỹ sử dụng.
+DES (Data Encryption Standard) là một thuật toán mã hoá có chiều dài khoá là 56 bit.
+3-DES (Triple-DES): là thuật toán mã hoá có độ dài khoá gấp 3 lần DES
+DSA (Digital Signature Algorithm): là một phần trong chuẩn về xác thực số đang được được chính phủ Mỹ sử dụng.
+EA (Key Exchange Algorithm) là một thuật toán trao đổi khoá đang được chính phủ Mỹ sử dụng.
+MD5 (Message Digest algorithm) được phát thiển bởi Rivest.
+RSA: là thuật toán mã hoá công khai dùng cho cả quá trình xác thực và mã hoá dữ liệu được Rivest, Shamir, and Adleman phát triển.
+RSA key exchange: là thuật toán trao đổi khoá dùng trong SSL dựa trên thuật toán RSA.
+RC2 and RC4: là các thuật toán mã hoá được phát triển bởi Rivest dùng cho RSA Data Security.
+SHA-1 (Secure Hash Algorithm): là một thuật toán băm đang được chính phủ Mỹ sử dụng.
 ## Tổng quan về Domain
 Domain là tên miền của 1 trang web hay còn gọi là địa chỉ trang web, định danh trang web đó chính xác theo tìm kiếm của người dùng
 
@@ -145,12 +145,12 @@ Giống như danh bạ điện thoại, domain là tên người dùng số thu�
 
 Máy chủ DNS thực hiện việc gán domain, lập bản đồ tên miền tới địa chỉ IP. Các máy chủ có tên thẩm quyền có trách nhiệm đối với mỗi tên miền của nó và có thể chỉ định tên máy chủ khác cho các domain phụ. Các thẻ RFID, ký tự quốc tế trong địa chỉ Email, mã số UPC,… cũng có thể dùng hệ thống phân giải tên miền
 ### Kiến trúc của DNS
-- Không gian tên miền-domain space
-- Tên miền-domain name
-- cú pháp tên miền-domain name syntax
-- Tên miền quốc tế hóa-Internationalized domain names
-- Máy chủ tên miền- domain name servers
-- Máy chủ tên miền có thẩm quyền-authoritative name server
+Không gian tên miền-domain space
+Tên miền-domain name
+cú pháp tên miền-domain name syntax
+Tên miền quốc tế hóa-Internationalized domain names
+Máy chủ tên miềndomain name servers
+Máy chủ tên miền có thẩm quyền-authoritative name server
 ### Cấu trúc DNS packet
 1 gói tin DNS có cấu trúc gồm:
 1. ID
@@ -376,7 +376,7 @@ Hỗ trợ các các ngôn ngữ lập trình cũng như cơ sở dữ liệu đ
 
 ### Phân loại hosting
 
-- Share hosting:
+Share hosting:
 
 Loại hình server có người user dùng chung, là loại hosting phổ biến nhất hiện nay, tất cả tài nguyên dữ liệu sẽ cùng lưu trữ trên một hệ thống
 
@@ -387,7 +387,7 @@ Phù hợp cho các website nhỏ, mới bắt đầu và có có lượng truy 
 |ưu điểm|nhược điểm|
 |-----|-----|
 |giá thành rẻ|độ bảo mật thấp, nhiều website cùng chung 1 hệ thống|
-|server cấu hình có sẵn||
+|server cấu hình có sẵn|bị giới hạn tài nguyên, phải chia sẻ với user khác|
 |control panel dễ tiếp cận||
 |phù hợp qui mô trung bình và nhỏ||
 |Provider sẽ chịu trách nhiệm quản lý và vận hành server||
@@ -396,13 +396,15 @@ Phù hợp cho các website nhỏ, mới bắt đầu và có có lượng truy 
 
 Được sử dụng công nghệ điện toán đám mây, tiếp nhận tài nguyên từ nhà cung cấp công nghệ cho tới host data, mạng lưới,... Phù hợp với các phân khúc khách hàng lớn, hệ thống website thương mại điện tử, mạng xã hội, forum,...nơi cần nhiều tài nguyên cũng như đòi hỏi băng thông lớn
 
-- Tiết kiệm chi phí
-- Không giới hạn số lượng máy chủ sử dụng cho một website hoặc 1 hệ thống các website
-- Thời gian uptime tốt
-- Sở hữu IP riêng biệt 
-- Tính bảo mật cao
-- Tăng hiệu suất dễ dàng
-- Hỗ trợ tự động cập nhật, sao lưu và backup dữ liệu 
+|ưu điểm|nhược điểm|
+|-----|-----|
+|Tiết kiệm chi phí phát sinh|chi phí ban đầu có thể cao hơn các dạng hosting khác nhưng chỉ phải chi trả cho phần của mình|
+|Không giới hạn số lượng máy chủ sử dụng cho một website hoặc 1 hệ thống các website||
+|Thời gian uptime tốt||
+|Sở hữu IP riêng biệt, kết nối mọi lúc mọi nơi ||
+|Tính bảo mật cao||
+|Tăng hiệu suất dễ dàng||
+|Hỗ trợ tự động cập nhật, sao lưu và backup dữ liệu ||
 
 ### VPS
 
@@ -412,15 +414,25 @@ User có toàn quyền kiểm soát không gian lưu trữ dữ liệu website.
 
 VPS phù hợp với đối tượng cần một giải pháp riêng, đặc thù vì VPS cho quyền root access để có thể thực hiện bất kỳ tuỳ chính nào biến nó thành nền tảng phù hợp. 
 
-- Tài nguyên server riêng (nhưng không phải mua hẳn một server)
-- Truy cập lớn từ website khác không ảnh hưởng tới hiệu năng của site chính
-- Truy cập quyền root lên server
-- Dễ nâng cấp
-- Khả năng tùy biến cao
+|ưu điểm|nhược điểm|
+|-----|-----|
+|Tài nguyên server riêng (nhưng không phải mua hẳn một server)|khảng năng mở rộng phức tạp|
+|Truy cập lớn từ website khác không ảnh hưởng tới hiệu năng của site chính|phụ thuộc server gốc|
+|Truy cập quyền root lên server|có thể gặp sự cố từ server gốc có lỗi|
+|Dễ nâng cấp tài nguyên||
+|Khả năng tùy biến cao, chi phí vừa phải||
+### Hosting bằng server riêng
+Được xây dựng dựa trên nền tảng server với cấu hình phần mềm phần cứng phù hợp, đáp ứng yêu cầu trên một mạng máy tính để cung cấp, hoặc hỗ trợ cung cấp một dịch vụ mạng
 
+|ưu điểm|nhược điểm|
+|-----|-----|
+|Quản trị máy chủ trực tiếp hoặc từ xa dễ dàng|độ phức tập phần cứng trung bình-cao|
+|Khả năng bảo mật cao, hạn chế được các cuộc tấn công mạng|chi phí xây dựng bảo trì thay thế cao|
+|cài đặt và cấu hình theo mong muốn riêng||
+|Tài nguyên không bị hạn chế, tăng băng thông, không gian lưu trữ và đảm bảo cho một lượng lớn người truy cập cùng lúc||
+|Không phải chia sẻ với những người dùng khác||
 ### Lưu ý chọn hosting
 
 Vấn đề ưu tiên là định dạng được hỗ trợ, băng thông và tốc độ truyền tải rồi mới tới dung lượng không gian lưu trữ
 
 Phải dự đoán lượng truy cập để chọn bandwith phù hợp, cân bằng chi phí để dành cho các mục cấu hình khác
-
