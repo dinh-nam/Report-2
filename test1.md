@@ -356,3 +356,71 @@ Nhắc tới hosting thì sẽ có FTP
 
 File Transfer Protocol – là một giao thức truyền tệp tin trên mạng Internet. Khi máy chủ hỗ trợ FTP, bạn có thể sử dụng các phần mềm FTP (FTP Client) để kết nối với máy chủ. Tải lên các tệp tin dữ liệu cũng như cập nhật website của mình một cách dễ dàng
 ### Yêu cầu-tính năng của hosting
+Tốc độ cao: yêu cầu cấu hình đủ lớn cũng như đường truyền mạng có tốc độ cao
+
+Cần có người giám sát để bảo trì định kỳ, cập nhật thường xuyên hạn chế các rủi ro về tính mạch lạc và bảo mật
+
+Cần dung lượng lưu trữ đủ lớn cho các nội dung thông tin dữ liệu hình ảnh...
+
+Cần bandwith đủ lớn để phục vụ các hoạt động trao đổi, chia sẻ thông tin 
+
+Phải hỗ trợ truy xuất máy chủ bằng giao thức FTP để cập nhật thông tin (bắt buộc)
+
+Hỗ trợ đầy đủ các dịch vụ E-mail như POP3 E-mail, E-mail Forwarding, DNS…
+
+Có giao diện quản lý Web Hosting để dễ dàng quản lý website, các tài khoản FTP, Email…
+
+Hạn chế càng ít banner ads từ provider càng tốt
+
+Hỗ trợ các các ngôn ngữ lập trình cũng như cơ sở dữ liệu đa dạng phục vụ các dịch vụ, hoạt động trên website
+
+### Phân loại hosting
+
+- Share hosting:
+
+Loại hình server có người user dùng chung, là loại hosting phổ biến nhất hiện nay, tất cả tài nguyên dữ liệu sẽ cùng lưu trữ trên một hệ thống
+
+Mọi hoạt động, dịch vụ, thao tác xử lý của các website sẽ được thực hiện trên cùng một cấu hình CPU
+
+Phù hợp cho các website nhỏ, mới bắt đầu và có có lượng truy cập lớn
+
+|ưu điểm|nhược điểm|
+|-----|-----|
+|giá thành rẻ|độ bảo mật thấp, nhiều website cùng chung 1 hệ thống|
+|server cấu hình có sẵn||
+|control panel dễ tiếp cận||
+|phù hợp qui mô trung bình và nhỏ||
+|Provider sẽ chịu trách nhiệm quản lý và vận hành server||
+
+### Cloud hosting
+
+Được sử dụng công nghệ điện toán đám mây, tiếp nhận tài nguyên từ nhà cung cấp công nghệ cho tới host data, mạng lưới,... Phù hợp với các phân khúc khách hàng lớn, hệ thống website thương mại điện tử, mạng xã hội, forum,...nơi cần nhiều tài nguyên cũng như đòi hỏi băng thông lớn
+
+- Tiết kiệm chi phí
+- Không giới hạn số lượng máy chủ sử dụng cho một website hoặc 1 hệ thống các website
+- Thời gian uptime tốt
+- Sở hữu IP riêng biệt 
+- Tính bảo mật cao
+- Tăng hiệu suất dễ dàng
+- Hỗ trợ tự động cập nhật, sao lưu và backup dữ liệu 
+
+### VPS
+
+Virtual Private Server là dạng server ảo được tạo ra bằng phương pháp phân chia một máy chủ vật lý thành nhiều máy chủ khác nhau, chạy dưới dạng chia sẻ tài nguyên từ máy chủ vật lý ban đầu đó. 
+
+User có toàn quyền kiểm soát không gian lưu trữ dữ liệu website. 
+
+VPS phù hợp với đối tượng cần một giải pháp riêng, đặc thù vì VPS cho quyền root access để có thể thực hiện bất kỳ tuỳ chính nào biến nó thành nền tảng phù hợp. 
+
+- Tài nguyên server riêng (nhưng không phải mua hẳn một server)
+- Truy cập lớn từ website khác không ảnh hưởng tới hiệu năng của site chính
+- Truy cập quyền root lên server
+- Dễ nâng cấp
+- Khả năng tùy biến cao
+
+### Lưu ý chọn hosting
+
+Vấn đề ưu tiên là định dạng được hỗ trợ, băng thông và tốc độ truyền tải rồi mới tới dung lượng không gian lưu trữ
+
+Phải dự đoán lượng truy cập để chọn bandwith phù hợp, cân bằng chi phí để dành cho các mục cấu hình khác
+
