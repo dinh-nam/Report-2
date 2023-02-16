@@ -376,7 +376,7 @@ Hỗ trợ các các ngôn ngữ lập trình cũng như cơ sở dữ liệu đ
 
 ### Phân loại hosting
 
-Share hosting:
+1. Share hosting:
 
 Loại hình server có người user dùng chung, là loại hosting phổ biến nhất hiện nay, tất cả tài nguyên dữ liệu sẽ cùng lưu trữ trên một hệ thống
 
@@ -392,7 +392,7 @@ Phù hợp cho các website nhỏ, mới bắt đầu và có có lượng truy 
 |phù hợp qui mô trung bình và nhỏ||
 |Provider sẽ chịu trách nhiệm quản lý và vận hành server||
 
-### Cloud hosting
+2. Cloud hosting
 
 Được sử dụng công nghệ điện toán đám mây, tiếp nhận tài nguyên từ nhà cung cấp công nghệ cho tới host data, mạng lưới,... Phù hợp với các phân khúc khách hàng lớn, hệ thống website thương mại điện tử, mạng xã hội, forum,...nơi cần nhiều tài nguyên cũng như đòi hỏi băng thông lớn
 
@@ -406,7 +406,7 @@ Phù hợp cho các website nhỏ, mới bắt đầu và có có lượng truy 
 |Tăng hiệu suất dễ dàng||
 |Hỗ trợ tự động cập nhật, sao lưu và backup dữ liệu ||
 
-### VPS
+3. VPS
 
 Virtual Private Server là dạng server ảo được tạo ra bằng phương pháp phân chia một máy chủ vật lý thành nhiều máy chủ khác nhau, chạy dưới dạng chia sẻ tài nguyên từ máy chủ vật lý ban đầu đó. 
 
@@ -421,7 +421,7 @@ VPS phù hợp với đối tượng cần một giải pháp riêng, đặc th�
 |Truy cập quyền root lên server|có thể gặp sự cố từ server gốc có lỗi|
 |Dễ nâng cấp tài nguyên||
 |Khả năng tùy biến cao, chi phí vừa phải||
-### Hosting bằng server riêng
+4.  Hosting bằng server riêng
 Được xây dựng dựa trên nền tảng server với cấu hình phần mềm phần cứng phù hợp, đáp ứng yêu cầu trên một mạng máy tính để cung cấp, hoặc hỗ trợ cung cấp một dịch vụ mạng
 
 |ưu điểm|nhược điểm|
@@ -431,7 +431,7 @@ VPS phù hợp với đối tượng cần một giải pháp riêng, đặc th�
 |cài đặt và cấu hình theo mong muốn riêng||
 |Tài nguyên không bị hạn chế, tăng băng thông, không gian lưu trữ và đảm bảo cho một lượng lớn người truy cập cùng lúc||
 |Không phải chia sẻ với những người dùng khác||
-### Lưu ý chọn hosting
+5.  Lưu ý chọn hosting
 
 Vấn đề ưu tiên là định dạng được hỗ trợ, băng thông và tốc độ truyền tải rồi mới tới dung lượng không gian lưu trữ
 
@@ -441,3 +441,30 @@ Phải dự đoán lượng truy cập để chọn bandwith phù hợp, cân b�
 ### Khái niệm
 ![](./picture/picture.png)
 
+Trong hệ thống mạng, __reverse proxy__ là loại _proxy server_ trung gian được dùng phía server thay vì dùng ở phía client như __forward proxy__ được ưa chuộng trong môi trường doanh nghiệp lớn cũng như các tổ chức quản lý website qui mô lớn
+
+Các reverse proxy thường được sở hữu hoặc quản lý bởi dịch vụ web và chúng được các client truy cập từ internet
+
+Vai trò dễ thấy nhất ở reverse proxy là cân bằng tải giữa các mạng cục bộ cũng như nén và mã hóa TLS vào giữa kênh giao tiếp của reverse proxy và các client
+
+### Quá trình hoạt động
+
+Requests sẽ đi từ client tới proxy server và sau đó proxy server sẽ chuyển tiếp các requests này tới server backend. Tác dụng của Reverse Proxy bao gồm:
+
+- Load balancing: giúp điều phối requests tới các servers backend để cân bằng tải, ngoài ra nó còn giúp hệ thống đạt tính sẵn sàng cao khi lỡ không may có server bị ngỏm thì nó sẽ chuyển request tới một server còn sống để thực thi.
+- ncreased Security: Reverse Proxy còn đóng vai trò là một lớp bảo vệ cho các servers backend. Nó giúp cho chúng ta có thể ẩn đi địa chỉ và cấu trúc thực của server backend.
+- Logging: Tất cả các requests tới các servers backend đều phải đi qua reverse proxy nên việc quản lý log của access tới từng server và endpoint sẽ dễ dàng hơn rất nhiều so với việc kiểm tra trên từng server một.
+- Encrypted Connection: Bằng việc mã hóa kết nối giữa client và reverse proxy với TLS, users sẽ được hưởng lợi từ việc mã hóa dữ liệu và bảo mật với HTTPS.
+
+### Công dụng của reverse proxy
+Ưu điểm lớn nhất của việc sử dụng Reverse proxy là khả năng quản lý tập trung. 
+
+Nó giúp kiểm soát mọi requests do clients gửi lên các servers mà được bảo vệ. 
+
+- Reverse proxy có thể che giấu sự tồn tại và các đặc điểm của các servers thực sự được dùng.
+- Trong trường hợp các trang giao thức bảo mật HTTPS, một máy chủ mạng có thể không tự mã hóa SSL hay TLS, mà giao nhiệm vụ này cho reverse proxy mà có thể được trang bị phần cứng `ssl accelerator card`
+- Load balancing, proxy có thể chia đều các yêu cầu của các máy khách tới các servers.
+- Proxy có thể nén nội dung, làm cho việc truy cập trở nên nhanh chóng.
+- Proxy có thể được dùng như là một application firewall để chống đỡ các cuộc tấn công (như Tấn công từ chối dịch vụ) vào các ứng dụng web.
+- Spoon feeding: một trang mạng động có thể được tạo ra bởi máy chủ mạng, proxy caching nội dung web server gửi và "rót" từ từ đến các máy khách hoạt động chậm. Máy chủ mạng không phải đợi máy khách
+- Nhằm giúp giảm tải máy chủ mạng proxy có thể cache các nội dung tĩnh như hình ảnh, tập tin.
