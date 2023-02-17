@@ -505,9 +505,9 @@ Cần thiết lập Virtual Interface cho server để có thể kết nối s�
 
 __Port-base__
 
-Tương tư với IP-base nhưng thay vì dùng IP khác nhau trên mỗi Vhost thì sẽ dùng port quản lý nhiều trang web phụ thuộc cấu hình port trên server
+Tương tự với IP-base nhưng thay vì dùng IP khác nhau trên mỗi Vhost thì sẽ dùng port quản lý nhiều trang web phụ thuộc cấu hình port trên server
 
-Port sẽ tránh lặp lại khi các app đang hoạt động
+Port sẽ tránh lặp lại khi các app đang hoạt động với port khác
 
 __Name-base__
 
@@ -517,12 +517,39 @@ Server sẽ đối chiếu http header từ client yêu cầu để ánh xạ đ
 Name-Based rất được ưa thích trong việc quản lý nhiều trang web trên cùng 1 máy chủ và trước tình trạng thế giới đang dần cạn kiệt IP Public, đồng thời sử dụng tối đa tài nguyên hiện có. 
 
 Hạn chế lớn nhất khi bạn dùng IP chung, nếu gặp vấn đề thì tất cả các trang web của bạn đều sẽ bị ảnh hưởng theo
-
 ### Ứng dụng triển khai
-
 Để deploy Vhost cần có máy chủ web, hiện tại có rất nhiều máy chủ web khác nhau nhưng Apache và Nginx là 2 loại phổ biến nhất
 
 Ngoài ra để hỗ trợ các máy chủ web thì sử dụng thêm các công nghệ khác nhau, phổ biến nhất là PHP-FPM, trình xử lý và tăng tốc hiệu suất máy chủ web
-
 ## Apache và Nginx
+### Khái niệm
+1. Apache
 
+Apache là "Apache HTTP server". Nó là một phần mềm máy chủ web hiệu suất cao, mã nguồn mở được phát triển và duy trì bởi Apache Software Foundation. Apache được thiết kế để tạo ra một máy chủ web cấp thương mại an toàn, mạnh mẽ và hiệu quả phù hợp với các tiêu chuẩn HTTP hiện hành
+
+Apache vẫn là lựa chọn đầu tiên của các quản trị viên máy chủ vì tính linh hoạt, kiến ​​trúc đơn giản, khả năng tương thích với nguồn và hỗ trợ đa nền tảng. Nó có thể chạy trên hầu hết các hệ điều hành như Windows, UNIX, OSX, NetWare, v.v. Nhưng nó thường được sử dụng kết hợp với Linux
+
+2. Nginx
+
+Nó là một máy chủ web mã nguồn mở, nhanh, nhẹ và hiệu suất cao có thể được sử dụng để phục vụ các tệp tĩnh
+
+NGINX đã hoạt động để phục vụ web HTTP. Tuy nhiên, ngày nay, nó cũng đóng vai trò là reverse proxy server cho các giao thức HTTP, HTTPS, SMTP, IMAP, POP3, mặt khác, nó cũng được sử dụng cho HTTP load balancer, HTTP cache và proxy email cho IMAP, POP3 và SMTP.
+
+NGINX cải thiện việc phân phối nội dung và ứng dụng, tăng cường bảo mật và tạo điều kiện thuận lợi cho khả năng mở rộng và tính khả dụng cho các trang web bận rộn nhất trên internet.
+
+Tóm lại, có thể nói rằng Nginx chỉ là một loại phần mềm được sử dụng trong các máy chủ web để phục vụ các yêu cầu đồng thời
+### Sự khác nhau
+|Apache|Nginx|
+|-----|-----|
+|Apache là một máy chủ HTTP mã nguồn mở|Nginx là một máy chủ web không đồng bộ mã nguồn mở, hiệu suất cao và máy chủ proxy ngược|
+|Sửa lỗi, hỗ trợ, bảo trì và phát triển ứng dụng trong máy chủ HTTP Apache được quản lý và duy trì bởi một cộng đồng người dùng từ khắp nơi trên thế giới và được điều phối bởi Quỹ phần mềm Apache|Nginx được xử lý bởi một công ty|
+|Apache cung cấp nhiều mô-đun đa xử lý khác nhau để xử lý các yêu cầu của máy khách và lưu lượng truy cập web|Nginx được thiết kế để xử lý đồng thời nhiều yêu cầu của máy khách với tài nguyên phần cứng tối thiểu|
+|một luồng chỉ được liên kết với một kết nối|một luồng trong Nginx có thể xử lý nhiều kết nối|
+|Apache có kiến ​​trúc đa luồng, thiếu khả năng mở rộng|Nginx tuân theo cách tiếp cận hướng sự kiện không đồng bộ để xử lý nhiều yêu cầu của khách hàng|
+|sử dụng cho các nền tảng Unix, Linux, Windows và Solaris|sử dụng cho các hệ thống giống như Unix và không hỗ trợ hoàn toàn cho Windows|
+|Apache phục vụ nội dung tĩnh bằng các phương pháp thông thường và xử lý nội dung động ngay trong chính webserver|Nginx không thể xử lý nội dung động trong nội bộ. Nó dựa vào các quy trình bên ngoài để thực thi|
+|thiết kế trở thành webserver|định hướng vừa là làm proxy server vừa là web server|
+|được viết bằng C và XML|chủ yếu được viết bằng C|
+|hiệu suất với nội dung tĩnh không cao|hiệu suất lớn và sử dụng bộ nhớ|
+|hệ thống cúâ hình phức tạp|hệ thống cấu hình khá đơn giản|
+|hệ thống bảo mật ít hơn Nginx và codebase rất lớn|cadebase khá nhỏ|
