@@ -511,3 +511,18 @@ Port sẽ tránh lặp lại khi các app đang hoạt động
 
 __Name-base__
 
+Nhiều website sử dụng chung 1 IP. 
+Server sẽ đối chiếu http header từ client yêu cầu để ánh xạ đến đúng website được chỉ định theo Domain. 
+
+Name-Based rất được ưa thích trong việc quản lý nhiều trang web trên cùng 1 máy chủ và trước tình trạng thế giới đang dần cạn kiệt IP Public, đồng thời sử dụng tối đa tài nguyên hiện có. 
+
+Hạn chế lớn nhất khi bạn dùng IP chung, nếu gặp vấn đề thì tất cả các trang web của bạn đều sẽ bị ảnh hưởng theo
+
+### Ứng dụng triển khai
+
+Để deploy Vhost cần có máy chủ web, hiện tại có rất nhiều máy chủ web khác nhau nhưng Apache và Nginx là 2 loại phổ biến nhất
+
+Ngoài ra để hỗ trợ các máy chủ web thì sử dụng thêm các công nghệ khác nhau, phổ biến nhất là PHP-FPM, trình xử lý và tăng tốc hiệu suất máy chủ web
+
+## Apache và Nginx
+
