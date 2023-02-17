@@ -548,8 +548,8 @@ Tóm lại, có thể nói rằng Nginx chỉ là một loại phần mềm đư
 |Apache có kiến ​​trúc đa luồng, thiếu khả năng mở rộng|Nginx tuân theo cách tiếp cận hướng sự kiện không đồng bộ để xử lý nhiều yêu cầu của khách hàng|
 |sử dụng cho các nền tảng Unix, Linux, Windows và Solaris|sử dụng cho các hệ thống giống như Unix và không hỗ trợ hoàn toàn cho Windows|
 |Apache phục vụ nội dung tĩnh bằng các phương pháp thông thường và xử lý nội dung động ngay trong chính webserver|Nginx không thể xử lý nội dung động trong nội bộ. Nó dựa vào các quy trình bên ngoài để thực thi|
-|thiết kế trở thành webserver|định hướng vừa là làm proxy server vừa là web server|
+|thiết kế trở thành webserver|định hướng vừa là proxy server vừa là web server|
 |được viết bằng C và XML|chủ yếu được viết bằng C|
-|hiệu suất với nội dung tĩnh không cao|hiệu suất lớn và sử dụng bộ nhớ|
+|hiệu suất với nội dung tĩnh không cao|hiệu suất lớn và sử dụng bộ nhớ ít|
 |hệ thống cúâ hình phức tạp|hệ thống cấu hình khá đơn giản|
-|hệ thống bảo mật ít hơn Nginx và codebase rất lớn|cadebase khá nhỏ|
+|hệ thống bảo mật ít hơn Nginx và codebase rất lớn|codebase khá nhỏ|
