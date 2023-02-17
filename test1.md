@@ -471,3 +471,43 @@ Một Reverse proxy hoạt động như sau:
 - Nhận được request kết nối của user
 - Thực hiện TCP three-way handshake
 - Kết nối với server gốc và chuyển tiếp request ban đầu
+### Phân biệt Forward proxy và Reverse proxy
+Các Forward proxy thường được sử dụng trong nội bộ các tổ chức lớn, chẳng hạn như các trường đại học và doanh nghiệp để:
+|forward proxy|reverse proxy|
+|-----|-----|
+|Ngăn chặn nhân viên truy cập các trang web nhất định|là firewall bảo vệ server|
+|Giám sát hoạt động trực tuyến của nhân viên|nén và cache dữ liệu|
+|Chặn lưu lượng truy cập độc hại đến server gốc|thiết lập vùng an toàn giữa proxy và client|
+|Cải thiện trải nghiệm của người dùng bằng cách lưu nội dung trang bên ngoài vào bộ nhớ cache|cân bằng tải cho server|
+## Vhost
+### Khái niệm
+Một dạng lưu trữ mà bạn lưu được nhiều domain khác nhau trên cùng một máy chủ sever. 
+
+Hiện nay Virtual được xem là một giải pháp tiết kiệm chi phí vì nó cho phép bạn nhúng nhiều domain trên một địa chỉ IP trong một Sever. 
+
+Server sẽ tự động hiểu tên miền nào đang vận hành bên trong vị trí lưu trữ Server tùy theo cách cài đặt
+
+### Cách vận hành
+Có khá nhiều cách khác nhau, trong đó có 3 cách phổ biến nhất
+- IP-base
+- Port-base
+- Name-base
+
+__IP-base__
+
+Phương pháp đơn giản nhất trong 3 cách trên
+
+Sử dụng 1 IP cho mỗi domain
+
+Nhiều IP sẽ trỏ về các domain trên cùng server, chỉ có 1 IP cho server
+
+Cần thiết lập Virtual Interface cho server để có thể kết nối sử dụng nhiều IP
+
+__Port-base__
+
+Tương tư với IP-base nhưng thay vì dùng IP khác nhau trên mỗi Vhost thì sẽ dùng port quản lý nhiều trang web phụ thuộc cấu hình port trên server
+
+Port sẽ tránh lặp lại khi các app đang hoạt động
+
+__Name-base__
+
