@@ -447,10 +447,8 @@ Các reverse proxy thường được sở hữu hoặc quản lý bởi dịch 
 
 Vai trò dễ thấy nhất ở reverse proxy là cân bằng tải giữa các mạng cục bộ cũng như nén và mã hóa TLS vào giữa kênh giao tiếp của reverse proxy và các client
 
-### Quá trình hoạt động
-
-Requests sẽ đi từ client tới proxy server và sau đó proxy server sẽ chuyển tiếp các requests này tới server backend. Tác dụng của Reverse Proxy bao gồm:
-
+### Vai trò của reverse proxy
+Tác dụng của Reverse Proxy bao gồm:
 - Load balancing: giúp điều phối requests tới các servers backend để cân bằng tải, ngoài ra nó còn giúp hệ thống đạt tính sẵn sàng cao khi lỡ không may có server bị ngỏm thì nó sẽ chuyển request tới một server còn sống để thực thi.
 - ncreased Security: Reverse Proxy còn đóng vai trò là một lớp bảo vệ cho các servers backend. Nó giúp cho chúng ta có thể ẩn đi địa chỉ và cấu trúc thực của server backend.
 - Logging: Tất cả các requests tới các servers backend đều phải đi qua reverse proxy nên việc quản lý log của access tới từng server và endpoint sẽ dễ dàng hơn rất nhiều so với việc kiểm tra trên từng server một.
@@ -468,3 +466,8 @@ Nó giúp kiểm soát mọi requests do clients gửi lên các servers mà đ�
 - Proxy có thể được dùng như là một application firewall để chống đỡ các cuộc tấn công (như Tấn công từ chối dịch vụ) vào các ứng dụng web.
 - Spoon feeding: một trang mạng động có thể được tạo ra bởi máy chủ mạng, proxy caching nội dung web server gửi và "rót" từ từ đến các máy khách hoạt động chậm. Máy chủ mạng không phải đợi máy khách
 - Nhằm giúp giảm tải máy chủ mạng proxy có thể cache các nội dung tĩnh như hình ảnh, tập tin.
+### Cách hoạt động
+Một Reverse proxy hoạt động như sau:
+- Nhận được request kết nối của user
+- Thực hiện TCP three-way handshake
+- Kết nối với server gốc và chuyển tiếp request ban đầu
